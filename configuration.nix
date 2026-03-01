@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ /mnt/etc/nixos/hardware-configuration.nix ];  # 导入硬件配置模块，用于加载硬件扫描结果
+  imports = [ /etc/nixos/hardware-configuration.nix ];  # 导入硬件配置模块，用于加载硬件扫描结果
 
   # 引导加载器配置
   boot.loader.systemd-boot.enable = true;  # 启用systemd-boot引导程序

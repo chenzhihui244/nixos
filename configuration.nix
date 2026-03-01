@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];  # 导入硬件配置模块，用于加载硬件扫描结果
+  imports = [ /mnt/etc/nixos/hardware-configuration.nix ];  # 导入硬件配置模块，用于加载硬件扫描结果
 
   # 引导加载器配置
   boot.loader.systemd-boot.enable = true;  # 启用systemd-boot引导程序
@@ -66,10 +66,12 @@
 
   # 系统级包列表
   environment.systemPackages = with pkgs; [
-    vim  # 文本编辑器
+    neovim  # 文本编辑器
     wget  # 文件下载工具
     kitty  # 终端模拟器
     git
+    google-chrome
+    mpv
   ];
 
   # 服务配置

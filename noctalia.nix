@@ -2,10 +2,10 @@
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${system}.default
     fuzzel
-    vesktop
+    #vesktop
     kitty
     fastfetch
-  # webcord
+    #webcord
     # ... 其他软件包
   ];
 }

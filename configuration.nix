@@ -10,6 +10,9 @@
   # 网络配置
   networking.hostName = "nixos";  # 设置主机名
   networking.networkmanager.enable = true;  # 启用NetworkManager，支持无线网络管理
+  hardware.bluetooth.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 
   # 时区设置
   time.timeZone = "Asia/Shanghai";  # 设置时区为上海（中国标准时间）
